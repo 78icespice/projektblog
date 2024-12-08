@@ -1,0 +1,11 @@
+<form action="/create_post" enctype="multipart/form-data" method="post">
+  <input type="text" name="text" />
+  <input type="file" name="image" />
+  <input type="submit" />
+</form>
+
+{{#events}}
+<hr>
+<h3>{{event_name}}</h3>
+<p>{{description}}</p>
+{{/events}}

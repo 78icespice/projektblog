@@ -1,0 +1,14 @@
+Login
+<form action="/login" enctype="multipart/form-data" method="post">
+  Benutzername:
+  <input type="text" name="benutzername" /><br />
+  Passwort:
+  <input type="password" name="password" /><br />
+  <input type="submit" />
+</form>
+
+{{#events}}
+<hr>
+<h3>{{event_name}}</h3>
+<p>{{description}}</p>
+{{/events}}

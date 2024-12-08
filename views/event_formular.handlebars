@@ -1,0 +1,13 @@
+<form action="/event" enctype="multipart/form-data" method="post">
+  Event Name:
+  <input type="text" name="event_name" /><br />
+  Beschreibung:
+  <input type="text" name="description" /><br />
+  <input type="submit" />
+</form>
+
+{{#events}}
+  <hr />
+  <h3>{{event_name}}</h3>
+  <p>{{description}}</p>
+{{/events}}

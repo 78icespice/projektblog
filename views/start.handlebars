@@ -1,7 +1,13 @@
-<h1>Hallo Welt!</h1>
+<h1>BAN</h1>
 
 <p>Willkommen auf meiner Website. Hier wird in Kürze eine interaktive Webapplikation entstehen. Viel Vergnügen!</p>
 
 <img src="construction.gif" width="200">
 
 {{> contactform}}
+
+{{#events}}
+<hr>
+<h3>{{event_name}}</h3>
+<p>{{description}}</p>
+{{/events}}
