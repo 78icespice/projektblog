@@ -1,0 +1,20 @@
+app.get("/new_post", async function (req, res) {
+  res.render("new_post", {});
+});
+
+app.get("/create_post", async function (req, res) {
+  res.render("create_post", {});
+});
+
+app.post("/create_post", upload.single("dropzone"), async function (req, res) {
+  await app.locals.pool.query(
+    "INSERT INTO photos (title, text, dropzone, user_id) VALUES ($1, $2, $3, $4)",
+    [req.body.text, req.file.filename]
+  );
+  res.redirect("/");
+});
+
+app.get("/", async function (req, res) {
+  const events = await app.locals.pool.query("select * form events");
+  res.render("start", { events: events.rows });
+});

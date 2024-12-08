@@ -1,14 +1,14 @@
-Login
-<form action="/login" enctype="multipart/form-data" method="post">
-  Benutzername:
-  <input type="text" name="benutzername" /><br />
-  Passwort:
-  <input type="password" name="password" /><br />
-  <input type="submit" />
-</form>
-
-{{#events}}
-<hr>
-<h3>{{event_name}}</h3>
-<p>{{description}}</p>
-{{/events}}
+<div class="container_lore">
+  <h1 class="h1_lore">Melde dich jetzt an!</h1>
+  <form
+    action="/login"
+    class="form_lore"
+    enctype="multipart/form-data"
+    method="post"
+  >
+    <input type="text" name="username" placeholder="Benutzername" /><br />
+    <input type="email" name="email" placeholder="E-Mail" /><br />
+    <input type="password" name="password" placeholder="Passwort" /><br />
+    <input type="submit" name="button" value="Log in" />
+  </form>
+</div>

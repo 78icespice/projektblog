@@ -1,9 +1,310 @@
 * {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
 }
 
-header,
-footer {
-  background-color: lightblue;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
   padding: 12px;
+  border-bottom: 5px solid #e04444;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  margin-right: 30%;
+  display: flex;
+  align-items: center;
+  width: 50pc;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 5px solid #e04444;
+  position: fixed;
+  bottom: 0;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.a_header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 2%;
+}
+
+.a_header:hover {
+  text-decoration: underline;
+  color: #e04444;
+}
+
+.a_footer {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.a_footer:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Login */
+.container_lore {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  margin: 30px 0px 30px 0px;
+}
+
+.form_lore {
+  background: none;
+}
+
+input[name="username"],
+input[name="email"],
+input[name="password"] {
+  width: 90%;
+  padding: 15px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+  text-align: center;
+  font-size: 150%;
+}
+
+input[name="button"] {
+  background-color: #ff4b4b;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 150%;
+  width: 80%;
+  margin-top: 20px;
+}
+
+input[name="button"]:hover {
+  background-color: #e04444;
+}
+
+.h1_lore {
+  font-size: 250%;
+  font-weight: bold;
+  background-color: white;
+  margin-top: 40px;
+}
+
+/* Home */
+.h1_start {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+/* Container für den Upload-Bereich */
+.upload-container {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  align-content: center;
+  width: 50%;
+  margin: 30px 0px 30px 0px;
+}
+
+/* Upload-Bereich */
+input[name="image"] {
+  background-color: #e9ecef;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 50px;
+  font-size: 10px;
+  color: #666;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1pc;
+  margin-top: 1pc;
+}
+
+input[name="image"]:hover {
+  background-color: #e04444df;
+  color: white;
+}
+
+/* Upload-Button */
+input[name="Upload"] {
+  background-color: #e04444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  width: 80%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[name="Upload"]:hover {
+  background-color: #e04444;
+}
+
+input[name="text"],
+input[name="title"] {
+  border: none;
+  padding: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 100%;
+}
+
+.form_upload {
+  background: none;
+}
+
+.blocker {
+  margin-top: 220pc;
+}
+.container_home {
+  margin-top: 3pc;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* Einzelne Bilder */
+.image-container {
+  flex: 1 1 calc(50% - 16px);
+  box-sizing: border-box;
+  max-width: 500px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+  .image-container {
+    flex: 1 1 100%;
+  }
+}
+
+.thumbnail {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.instagram-link {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 150px;
+}
+
+.instagram-link a {
+  width: 60px;
+}
+
+.instagram-link img {
+  height: 40px;
+  width: 40px;
+  transition: transform 0.3s ease;
+}
+
+.instagram-link img:hover {
+  transform: scale(1.1);
+}
+
+.impressum {
+  padding-left: 150px;
+}
+
+.impressum a {
+  width: 150px;
+}
+
+.Copyright p {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
 }

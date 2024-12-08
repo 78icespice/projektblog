@@ -3,22 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HTML5 Boilerplate</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
 
   <body>
     <header>
-      <a href="/">Home</a>
-      <a href="/news">News</a>
-
+      <div class="logo">
+        <a href="/">
+          <img src="Logo_header.png" alt="logo" />
+        </a>
+      </div>
+      <a class="a_header" href="/">Home</a>
+      <a class="a_header" href="/new_post">Upload</a>
+      <a class="a_header" href="/login">Log In</a>
+      <a class="a_header" href="/register">Register</a>
     </header>
 
     {{{body}}}
 
     <footer>
-      <a href="/impressum">Impressum</a>
+      <div class="impressum">
+        <a class="a_footer" href="/impressum">Impressum</a>
+      </div>
+
+      <div class="Copyright">
+        <p>Alle Rechte vorbehalten © Copyright 2024</p>
+      </div>
+
+      <div class="instagram-link">
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="Instagram_Icon.png" alt="Instagram Icon" />
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+          <img src="Linkedin_Icon.png" alt="Linkedin Icon" />
+        </a>
+      </div>
     </footer>
   </body>
-
 </html>

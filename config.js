@@ -14,7 +14,7 @@ export function createApp(dbconfig) {
   const pool = new Pool(dbconfig);
   const login = new bbz307.Login(
     "users",
-    ["benutzername", "passwort" "profilbild"],
+    ["username", "password", "email"],
     pool
   );
 
@@ -60,28 +60,15 @@ export function createApp(dbconfig) {
       res.redirect("/login");
       return;
     } else {
-      res.redirect("/intern");
+      res.redirect("/new_post");
       return;
     }
   });
 
-  app.get("/event_formular", function (req, res) {
-    res.render("event_formular");
-  });
-
-  app.post("/event", upload.none(), async function (req, res) {
-    await pool.query(
-      "INSERT INTO events (event_name, description) VALUES ($1, $2)",
-      [req.body.event_name, req.body.description]
-    );
-    res.redirect("/");
-  });
-
-  app.post("/event", upload.none(), async function (req, res) {
-    const user = await login.loggedInUser(req);
-    await pool.query(
-      "INSERT INTO event (event_name, description) VALUES ($1, $2, $3)",
-      [req.body.event_name, req.body.description, user.id]
+  app.post("/create_post", upload.single("image"), async function (req, res) {
+    await app.locals.pool.query(
+      "INSERT INTO photos (title, text, image) VALUES ($1, $2, $3)",
+      [req.body.title, req.body.text, req.file.filename]
     );
     res.redirect("/");
   });

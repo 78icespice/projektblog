@@ -1,16 +1,20 @@
-Registrierung
-<form action="/register" enctype="multipart/form-data" method="post">
-  Benutzername:
-  <input type="text" name="benutzername" /><br />
-  Passwort:
-  <input type="password" name="password" /><br />
-  Avatar:
-  <input type="text" name="avatar" /><br />
-  <input type="submit" />
-</form>
+<div class="container_lore">
+  <h1 class="h1_lore">Registrierung</h1>
+  <form
+    action="/register"
+    class="form_lore"
+    enctype="multipart/form-data"
+    method="post"
+  >
+    <input type="text" name="username" placeholder="Benutzername" /><br />
+    <input type="text" name="email" placeholder="E-Mail" /><br />
+    <input type="password" name="password" placeholder="Passwort" /><br />
+    <input type="submit" name="button" value="Registrieren" />
+  </form>
+</div>
 
 {{#events}}
-<hr>
-<h3>{{event_name}}</h3>
-<p>{{description}}</p>
+  <hr />
+  <h3>{{event_name}}</h3>
+  <p>{{description}}</p>
 {{/events}}
